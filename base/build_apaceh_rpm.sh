@@ -19,7 +19,6 @@ cd ..
 #docker run --rm -e VERBOSE="-x" -v $base_dir/httpd-$version:/src --workdir=/src --entrypoint="./configure" demoregistry.dataman-inc.com/library/centos7-rpmbuild --prefix=/usr/local/apache --with-apr=/usr --with-apr-util=/usr --with-pcre --with-ssl --enable-so --enable-ssl --enable-mods-shared=all --enable-cache --enable-disk-cache --enable-file-cache --enable-mem-cache
 docker run --rm -e VERBOSE="-x" -v $base_dir/httpd-$version:/src --workdir=/src demoregistry.dataman-inc.com/library/centos7-rpmbuild httpd.spec
 
-rm -f *.rpm
-cp httpd-$version/RPMS/x86_64/*.rpm rpms/
-cp httpd-$version/SRPMS/*.rpm rpms/
+mkdir -p  rpms/httpd 
+cp httpd-$version/RPMS/x86_64/*.rpm rpms/httpd/
 rm -rf httpd-$version httpd-$version-17.el7.centos.1.src.rpm
