@@ -8,7 +8,8 @@ version=2.4.6
 
 rm -rf httpd-$version
 if [ ! -f httpd-$version-17.el7.centos.1.src.rpm ];then
-    wget ftp://bo.mirror.garr.it/1/slc/centos/7.0.1406/os/Sources/Packages/httpd-$version-17.el7.centos.1.src.rpm
+    wget ftp://ftp.pbone.net/mirror/vault.centos.org/7.0.1406/os/Source/SPackages/httpd-$version-17.el7.centos.1.src.rpm
+    #wget ftp://bo.mirror.garr.it/1/slc/centos/7.0.1406/os/Sources/Packages/httpd-$version-17.el7.centos.1.src.rpm
 fi
 mkdir httpd-$version
 cd httpd-$version
